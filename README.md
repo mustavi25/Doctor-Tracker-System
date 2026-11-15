@@ -318,8 +318,8 @@ Free-tier stack: **MongoDB Atlas** (database), **Render** (API), **Vercel** (cli
 
 1. **Atlas.** Create a free M0 cluster, a database user (letters and numbers only in the password), and allow `0.0.0.0/0` under Network Access. Copy the connection string and add the database name: `mongodb+srv://USER:PASS@cluster0.xxxxx.mongodb.net/doctor_tracker?retryWrites=true&w=majority`.
 2. **Seed the hosted database** from your machine: put the Atlas string in `server/.env` and run `npm run seed`. (This wipes that database.)
-3. **API on Render.** New -> Blueprint -> select this repo (it reads `render.yaml`), or create a Web Service manually with root directory `server`, build `npm install`, start `npm start`, health check `/api/health`. Set `MONGO_URI`, `JWT_SECRET` (any long random string), `NODE_ENV=production` and `CLIENT_URL` (your Vercel URL, set it after step 4).
-4. **Client on Vercel.** Import the repo, set the root directory to `client`, and add the environment variable `API_URL=https://<your-service>.onrender.com`. `API_URL` is read when the app is built, so redeploy after changing it.
+3. **API on Render.** New -> Blueprint -> select this repo (it reads `render.yaml`), or create a Web Service manually with root directory `server`, build `npm install`, start `npm start`, health check `/api/health`. Set `MONGO_URI`, `JWT_SECRET` (any long random string), `NODE_ENV=production` and `CLIENT_URL` (https://doctor-tracker-api-k9qh.onrender.com).
+4. **Client on Vercel.** Import the repo, set the root directory to `client`, and add the environment variable `API_URL=doctor-tracker-system-amber.vercel.app`. `API_URL` is read when the app is built, so redeploy after changing it.
 5. Open the Vercel URL and sign in with the demo credentials.
 
 Notes: Render's free tier sleeps after inactivity, so the first request can take 30-60 s while it wakes (the login spinner covers it). Because the browser only talks to the Vercel origin, the auth cookie is first-party and needs no cross-site cookie settings. Change the demo password (`ADMIN_PASSWORD`) before using real data.
