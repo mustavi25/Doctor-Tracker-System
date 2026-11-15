@@ -1,0 +1,19 @@
+# Render Blueprint for the API. Dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: doctor-tracker-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI      # your MongoDB Atlas connection string (set in the dashboard)
+        sync: false
+      - key: JWT_SECRET     # generated once by Render
+        generateValue: true
+      - key: CLIENT_URL     # your Vercel URL, e.g. https://doctor-tracker.vercel.app
+        sync: false
