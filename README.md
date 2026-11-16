@@ -339,26 +339,4 @@ Notes: Render's free tier sleeps after inactivity, so the first request can take
 | Dashboard days are bucketed in UTC | Pass the user's time zone to `$dateToString` |
 | Single `admin` role | The `role` field and an `authorize()` middleware are already in place for more roles |
 
-## Visual evidence
 
-Screenshots live in `docs/screenshots/` (desktop 1440 px wide, mobile 390 px wide).
-
-### Desktop
-
-| Login | Dashboard |
-|---|---|
-| ![Login](docs/screenshots/login-desktop.png) | ![Dashboard](docs/screenshots/dashboard-desktop.png) |
-
-| Doctors (search + filters) | Doctor detail |
-|---|---|
-| ![Doctors](docs/screenshots/doctors-desktop.png) | ![Doctor detail](docs/screenshots/doctor-detail-desktop.png) |
-
-| Patients (filters) | Add / edit dialog |
-|---|---|
-| ![Patients](docs/screenshots/patients-desktop.png) | ![Dialog](docs/screenshots/dialog-desktop.png) |
-
-### Mobile
-
-| Dashboard | Menu drawer | Doctors (cards) | Filters |
-|---|---|---|---|
-| ![Dashboard](docs/screenshots/dashboard-mobile.png) | ![Menu](docs/screenshots/menu-mobile.png) | ![Doctors](docs/screenshots/doctors-mobile.png) | ![Filters](docs/screenshots/filters-mobile.png) |
