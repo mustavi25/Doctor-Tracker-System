@@ -2,8 +2,8 @@
 
 Doctor Tracker is a secure, admin-only web portal for managing doctors and their patients. Admins sign in, create and search doctors, attach patients to them, edit or remove patient records, and watch a live dashboard of totals, patients per doctor, registrations over time and condition breakdowns. It is built as a Next.js client talking over REST to a standalone Express API backed by MongoDB, with the data model, indexes and query patterns designed so lists, filters and pagination stay fast as the data grows.
 
-**Live demo:** `<your-vercel-url>` · **API:** `<your-render-url>/api/health`
-**Demo login:** `admin@doctortracker.com` / `Admin@12345` (created by `npm run seed`)
+**Live demo:** `doctor-tracker-system-amber.vercel.app` · **API:** `https://doctor-tracker-api-k9qh.onrender.com/api/health`
+
 
 ---
 
